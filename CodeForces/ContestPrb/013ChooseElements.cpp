@@ -42,12 +42,12 @@ int main(){
         ar.push_back(ele);
     }
     vector<int>sorted_arr = mergeSort(ar);
-    long long int max_sum = 0, n=num-1;
-    while(k--){
-        max_sum += sorted_arr[n];
-        n--;
+    long long int max_sum = 0;
+    for(int j=num-1;j>=(num-k);j--){
+        if(sorted_arr[j] >= 0){
+            max_sum += sorted_arr[j];
+        }
     }
-    if(max_sum<0) cout << 0 << "\n";
-    else cout << max_sum << "\n";
+    cout<<max_sum<<"\n";
     return 0;
 }
