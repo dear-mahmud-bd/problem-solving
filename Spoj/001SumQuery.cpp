@@ -13,11 +13,9 @@ void sumByKey(int n){
 int main(){
     int n, T, l, r;
     cin>>n;
-    int ar[n];
     for (int i=0; i<n; i++){
         cin>>ar[i];
     }
-    sort(ar, ar+n);
     sumByKey(n);
     cin>>T;
     while (T--){
